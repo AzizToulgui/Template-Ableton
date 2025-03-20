@@ -67,7 +67,7 @@ const Footer = () => {
                         <div className="flex gap-1">
                             {/* Language Dropdown */}
                             <div className="relative">
-                                <select className="font-semibold h-10  px-4 pr-8 py-2 bg-[#EEEEEE] text-black focus:outline-none text-xs appearance-none">
+                                <select className="font-semibold h-8 w-30 px-4 pr-8 py-2 bg-[#EEEEEE] text-black focus:outline-none text-xs appearance-none">
                                     <option>English</option>
                                     <option>French</option>
                                     <option>German</option>
@@ -77,7 +77,7 @@ const Footer = () => {
 
                             {/* Country Dropdown */}
                             <div className="relative">
-                                <select className=" font-semibold h-10 w-40  px-4 pr-8 py-2 bg-[#EEEEEE] text-black focus:outline-none text-xs appearance-none">
+                                <select className=" font-semibold h-8 w-50  px-4 pr-8 py-2 bg-[#EEEEEE] text-black focus:outline-none text-xs appearance-none">
                                     <option>Tunisia</option>
                                     <option>Germany</option>
                                     <option>France</option>
@@ -89,8 +89,15 @@ const Footer = () => {
                 </div>
 
                 {/* Right Section */}
-                <div className="w-full md:w-1/3 bg-blue-600 h-20 flex justify-center items-center text-white">
-                    Right Content
+                <div className="w-full md:w-1/3  h-20 flex flex-col justify-center items-center self-center ">
+                    <div className="">
+                        <h2 className="font-bold text-lg">Sign up to our newsletter</h2>
+                        <p>Enter your email address to stay up to date with the latest offers, tutorials, downloads, surveys and more.</p>
+                    </div>
+                    <div className="flex-1 py-4">
+                        <input type="email" placeholder="Email Address" className="bg-[#EEEEEE] h-10 w-70 flex-1 px-2"/>
+                        <button className="bg-[#0000ff] text-white h-10 w-30 font-semibold text-lg">Sign up</button>
+                    </div>
                 </div>
             </div>
 
