@@ -5,11 +5,12 @@ import { FaFacebook, FaXTwitter, FaYoutube, FaInstagram, FaTiktok, FaDiscord } f
 
 const Footer = () => {
     return (
-        <div className="w-[90%] max-w-7xl mx-auto p-6">
+        <div className="mt-8 border-t-2 border-gray-200">
+        <div className="w-[90%] max-w-7xl mx-auto p-6 mt-4">
             {/* Top Section */}
-            <div className="flex flex-col md:flex-row md:justify-between gap-8">
+            <div className="flex flex-wrap sm:flex-nowrap justify-between gap-8 items-start">
                 {/* Left Section */}
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-6 w-full sm:w-1/3">
                     <h1 className="text-4xl font-bold">Ableton</h1>
 
                     <div className="flex flex-col gap-2">
@@ -48,10 +49,10 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* Middle Section */}
-                <div className="w-full md:w-1/3 flex flex-col justify-center items-start p-16 gap-8 ">
-                    <div className="flex flex-col gap-2 ">
-                        <h2 className="font-bold text-lg ">Education</h2>
+                {/* Middle Section  */}
+                <div className="w-full sm:w-1/3 flex flex-col items-start p-6 sm:p-0 gap-6">
+                    <div className="flex flex-col gap-2">
+                        <h2 className="font-bold text-lg">Education</h2>
                         <Link href="#" className="flex items-center gap-2 text-md">
                             Offers for students and teachers <span>{'>'}</span>
                         </Link>
@@ -62,48 +63,56 @@ const Footer = () => {
                             Ableton for Colleges and Universities <span>{'>'}</span>
                         </Link>
                     </div>
-                    <div className="flex flex-col gap-2  ">
+                    <div className="flex flex-col gap-2">
                         <h2 className="font-bold text-lg">Language and Location</h2>
-                        <div className="flex gap-1">
+                        <div className="flex gap-1 flex-wrap">
                             {/* Language Dropdown */}
-                            <div className="relative">
-                                <select className="font-semibold h-8 w-30 px-4 pr-8 py-2 bg-[#EEEEEE] text-black focus:outline-none text-xs appearance-none">
-                                    <option>English</option>
-                                    <option>French</option>
-                                    <option>German</option>
-                                </select>
-                                <span className="absolute right-2 top-1/2 -translate-y-1/2 text-black text-xs">▼</span>
+                            <div className="w-1/2 sm:w-auto">
+                                <div className="flex items-center bg-[#EEEEEE] px-4 py-2 h-8 w-full text-black text-xs font-semibold">
+                                    <select className="w-full bg-transparent focus:outline-none appearance-none">
+                                        <option>English</option>
+                                        <option>French</option>
+                                        <option>German</option>
+                                    </select>
+                                    <span className="ml-2 pointer-events-none">▼</span>
+                                </div>
                             </div>
 
                             {/* Country Dropdown */}
-                            <div className="relative">
-                                <select className=" font-semibold h-8 w-50  px-4 pr-8 py-2 bg-[#EEEEEE] text-black focus:outline-none text-xs appearance-none">
-                                    <option>Tunisia</option>
-                                    <option>Germany</option>
-                                    <option>France</option>
-                                </select>
-                                <span className="absolute right-2 top-1/2 -translate-y-1/2 text-black text-xs">▼</span>
+                            <div className="w-1/2 sm:w-auto">
+                                <div className="flex items-center bg-[#EEEEEE] px-4 py-2 h-8 w-full text-black text-xs font-semibold">
+                                    <select className="w-full bg-transparent focus:outline-none appearance-none">
+                                        <option>Tunisia</option>
+                                        <option>Germany</option>
+                                        <option>France</option>
+                                    </select>
+                                    <span className="ml-2 pointer-events-none">▼</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {/* Right Section */}
-                <div className="w-full md:w-1/3  h-20 flex flex-col justify-center items-center self-center ">
-                    <div className="">
-                        <h2 className="font-bold text-lg">Sign up to our newsletter</h2>
-                        <p>Enter your email address to stay up to date with the latest offers, tutorials, downloads, surveys and more.</p>
-                    </div>
-                    <div className="flex-1 py-4">
-                        <input type="email" placeholder="Email Address" className="bg-[#EEEEEE] h-10 w-70 flex-1 px-2"/>
-                        <button className="bg-[#0000ff] text-white h-10 w-30 font-semibold text-lg">Sign up</button>
+                {/* Right Section - Responsive Input */}
+                <div className="w-full sm:w-1/3 flex flex-col items-start gap-4">
+                    <h2 className="font-bold text-lg">Sign up to our newsletter</h2>
+                    <p>Enter your email address to stay up to date with the latest offers, tutorials, downloads, surveys, and more.</p>
+                    <div className="flex w-full">
+                        <input
+                            type="email"
+                            placeholder="Email Address"
+                            className="bg-[#EEEEEE] h-10 flex-grow px-2"
+                        />
+                        <button className="bg-[#0000ff] text-white h-10 px-4 font-semibold text-lg whitespace-nowrap">
+                            Sign up
+                        </button>
                     </div>
                 </div>
             </div>
 
             {/* Bottom Section */}
-            <div className="flex flex-col md:flex-row justify-center md:justify-between items-center mt-10 gap-4">
-                <div className="flex flex-wrap justify-center md:justify-start gap-4 text-sm font-semibold">
+            <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center mt-10 gap-4">
+                <div className="flex flex-wrap justify-center sm:justify-start gap-4 text-sm font-semibold">
                     <Link href="#">Contact Us</Link>
                     <Link href="#">Press Resources</Link>
                     <Link href="#">Legal Info</Link>
@@ -117,6 +126,7 @@ const Footer = () => {
                     <h4 className="font-semibold text-sm">Made in Berlin</h4>
                     <Image src="/logo.png" alt="logo" width={30} height={30} />
                 </div>
+            </div>
             </div>
         </div>
     );
