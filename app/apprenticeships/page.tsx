@@ -2,12 +2,13 @@ import React from 'react'
 import Image from "next/image";
 import {TracingBeam} from "@/components/ui/tracing-beam";
 
+
 const Apprenticeships = () => {
     return (
 
-        <div className="p-4 w-[50%] ml-36">
-            {/*Top image*/}
-            <TracingBeam>
+        <div className="p-4 max-w-3xl ml-[10%]">
+            <TracingBeam className="">
+                {/*Top image*/}
             <div className="flex flex-col gap-6">
                 <h1 className="font-bold text-4xl md:text-5xl">Apprenticeships at Ableton</h1>
                 <h3 className="font-bold text-base md:text-lg">What are they and what do you need to get started?</h3>
@@ -29,6 +30,7 @@ const Apprenticeships = () => {
                 <Image src="/apprenticeships-2.jpg" alt="" className="mt-4" width={700} height={700} />
             </div>
             </TracingBeam>
+
         </div>
 
     )
