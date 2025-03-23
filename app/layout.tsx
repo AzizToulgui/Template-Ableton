@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Inter } from 'next/font/google';
-import Linker from "@/components/Linker";
+import {FloatingNav} from "@/components/FloatingNav";
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
@@ -19,11 +19,28 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+    const navItems = [
+        {
+            name: "About",
+            link: "/about",
+
+        },
+        {
+            name: "Jobs",
+            link: "/jobs",
+
+        },
+        {
+            name: "Apprenticeships",
+            link: "/apprenticeships",
+        },
+    ];
   return (
+
     <html lang="en" className={inter.variable}>
       <body>
       <Navbar/>
-      <Linker/>
+      <FloatingNav navItems={navItems}/>
         {children}
       <Footer/>
       </body>
