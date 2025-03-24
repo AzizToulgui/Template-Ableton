@@ -4,6 +4,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Inter } from 'next/font/google';
 import {FloatingNav} from "@/components/FloatingNav";
+import React from "react";
+import { redirect } from 'next/navigation';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
@@ -35,13 +37,14 @@ export default function RootLayout({
             link: "/apprenticeships",
         },
     ];
-  return (
+
+    return (
 
     <html lang="en" className={inter.variable}>
       <body>
       <Navbar/>
       <FloatingNav navItems={navItems}/>
-        {children}
+      {children}
       <Footer/>
       </body>
     </html>

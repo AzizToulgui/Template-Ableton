@@ -1,13 +1,10 @@
 import React from 'react'
 import Image from "next/image";
-import {TracingBeam} from "@/components/ui/tracing-beam";
 
 
 const Apprenticeships = () => {
     return (
-
         <div className="p-4 max-w-3xl ml-[10%]">
-            <TracingBeam className="">
                 {/*Top image*/}
             <div className="flex flex-col gap-6">
                 <h1 className="font-bold text-4xl md:text-5xl">Apprenticeships at Ableton</h1>
@@ -29,10 +26,7 @@ const Apprenticeships = () => {
                 </div>
                 <Image src="/apprenticeships-2.jpg" alt="" className="mt-4" width={700} height={700} />
             </div>
-            </TracingBeam>
-
         </div>
-
     )
 }
 export default Apprenticeships
